@@ -14,7 +14,7 @@ export async function generateStaticParams() {
   const articles = await client.getCollection("node--article");
 
   return articles.map((article) => ({
-    slug: article.path.alias.split("/"),
+    slug: article.path.alias.split("/").slice(1),
   }));
 }
 
