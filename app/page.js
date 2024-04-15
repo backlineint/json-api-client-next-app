@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { JsonApiClient } from "@drupal-api-client/json-api-client";
 import styles from "./page.module.css";
 
@@ -7,6 +6,7 @@ export default async function Home() {
     "https://dev-drupal-api-client-poc.pantheonsite.io"
   );
   const articles = await client.getCollection("node--article");
+
   return (
     <main className={styles.main}>
       <h1>Umami Articles</h1>

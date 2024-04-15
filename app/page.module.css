@@ -1,3 +1,7 @@
+.main * + * {
+  margin-bottom: 1.5rem;
+}
+
 .main {
   display: flex;
   flex-direction: column;
